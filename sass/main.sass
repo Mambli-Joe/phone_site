@@ -1,0 +1,649 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+
+.wrapper
+  max-width: 1200px
+  margin: 0 auto
+
+@mixin hPadding
+    padding-top: $hPadding
+    padding-bottom: $hPadding 
+    text-align: center
+    color: $cBlue
+    font-size: 2em
+    margin: 0
+
+// SECTION NAVBAR
+.navbar
+    position: fixed
+    z-index: 99999999999
+    height: 80px
+    overflow: hidden
+    top: 0
+    display: flex
+    align-items: center
+    width: 100%
+    border-bottom: 3px solid $cBlue
+    background: $cBlack
+    transition: all .5s
+    
+.logo
+    font-size: 1.5em
+    color: #ffffff
+    padding: 10px
+    text-decoration: none
+    font-weight: 700
+    transition: color 0.3s
+    text-transform: uppercase
+    float: left
+    margin-left: 100px
+    span
+        color: $cBlue 
+
+.menu
+    position: absolute
+    right: 20px
+    margin-right: 100px
+    ul
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: center
+        flex: 1 1 0
+        a
+            font-size: 1em
+            color: #ffffff
+            padding: 10px
+            text-decoration: none
+            font-weight: 700
+            transition: color 0.3s
+            text-transform: uppercase
+            &:hover
+                border: 3px solid #2980b9
+                border-left: 0
+                border-right: 0
+                background: transparent
+
+
+
+.nav-btn
+    display: none
+    position: absolute
+    right: 20px
+    span
+        display: block
+        color: #ffffff
+        margin: 6px
+        width: 40px
+        height: 3px
+
+
+//SECTION Header
+
+header
+    background: url('../img/header-bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 80vh
+    position: relative
+
+
+
+.headerText
+    padding-top: 20%
+    h1
+        font-weight: bold
+        font-size: 5em
+        text-align: center
+        color: #fff
+        line-height: normal
+        margin: 0
+    p
+        font-size: 3em
+        text-align: center
+        color: #ffffff
+        line-height: normal
+        margin-top: 20px
+        margin-bottom: 25px
+        span
+            color: $cBlue
+        &+p
+            margin: 0
+            color: #ffffff
+            font-size: 1.5em
+            margin-top: 100px
+            padding-bottom: 20px
+
+.headerContact
+    position: absolute
+    top: 80%
+    left: 50%
+    transform: translate(-50%, -50%)
+    a
+        padding: 10px
+        cursor: pointer
+        i
+            height: 50px
+            width: 50px
+            font-size: 50px
+            color: #ffffff
+            opacity: .5
+            text-align: center
+            &:hover
+                opacity: 1
+
+
+//SECTION HR
+
+.or
+    display: flex
+    flex-direction: row
+    margin-bottom: 1.2em
+    align-items: center
+    .bar
+        flex: auto
+        border: none
+        height: 1px
+        background-color: $cBlack
+    span
+        color: $cBlack
+        padding: 0 0.8em
+        i
+            font-size: 2em
+
+
+//SECTION FEATURES
+
+.featuresSection
+    background-color: #ced6e0
+    .wrapper
+        h1
+            @include hPadding
+        .featuresList
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-between
+            align-items: center
+            .featuresItem
+                display: flex
+                flex-flow: column nowrap
+                justify-content: space-around
+                align-items: center
+                flex: 1 1 33%
+                margin-top: 100px
+                margin-bottom: 100px
+                padding: 20px
+                &:hover
+                    border: 3px solid $cBlue
+                    border-radius: 30px
+                    box-shadow: 0px 0px 40px rgba(76, 118, 255, 1), 0px 0px 40px rgba(0, 0, 0, 0.4) 
+
+                i
+                    color: $cBlack
+                    text-align: center
+                    font-size: 3em
+                    padding: 20px
+                    border: 3px solid $cBlue
+                    border-radius: 50%
+                h2
+                    padding: 10px
+                    color: $cBlue
+                p
+                    text-align: center
+                    padding: 10px
+                    color: $cBlack
+                    font-weight: bold
+                    
+
+//SECTION ABOUT US
+
+.aboutUs
+    background-color: #fff
+    .wrapper
+        .aUsContent
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+            .aUsCenterBlock
+                img
+                    width: 100%
+                    height: 100%
+            .aUsLeftBlock
+                i
+                    float: left
+                    color: $cBlack
+                    text-align: center
+                    font-size: 2em
+                    padding: 20px
+                    line-height: 2
+                h3
+                    padding: 5px
+                p
+                    padding: 5px
+                    padding-bottom: 100px
+                
+            .aUsRightBlock
+                i
+                    float: right
+                    color: $cBlack
+                    text-align: center
+                    font-size: 2em
+                    padding: 20px
+                    line-height: 2
+                h3
+                    padding: 5px
+                p
+                    padding: 5px
+                    padding-bottom: 100px
+                 
+    
+        h2
+            text-align: center
+            padding-top: $hPadding
+            padding-bottom: $hPadding 
+
+        
+//SECTION WORKS
+
+.works
+    background-color: #ced6e0
+    padding-bottom: 80px
+    .wrapper
+        h1
+            @include hPadding
+.toggles
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: center
+    @include hPadding
+    button
+        margin-left: 20px
+        background: #ced6e0
+        border: 0
+        padding: 10px 20px
+        color: $cBlack
+        font-weight: bold
+        font-size: 1.5em
+        &:hover
+            background: darken($cBlue, 10%)
+            border-radius: 15px
+            color: white
+        
+.posts
+
+    display: flex
+    flex-flow: row wrap
+    justify-content: cen
+    align-items: center
+    transition: all 1s
+    .post
+        position: relative
+        cursor: pointer
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: center
+        flex: 1 1 25%
+        transition: background .9s
+        img
+            width: 100%
+            height: 100%
+
+        .postHover
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            align-items: center
+            background: rgba(76, 118, 255, 0)
+            width: 100%
+            height: 100%
+            opacity: 0
+            transition: all .5s
+            i
+                color: white
+                border: 1px solid white
+                border-radius: 50%
+                padding: 10px
+            h3
+                color: white
+                padding: 10px
+            p
+                color: white
+                padding: 10px
+                text-align: center
+                
+            &:hover
+                opacity: 1
+                background: rgba(76, 118, 255, .75)
+
+//SECTION OUR TEAM
+.ourTeam
+    padding-bottom: 100px
+    h1
+        @include hPadding
+    h2
+        text-align: center
+        margin-bottom: 20px
+        
+.ourTeamList
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: center    
+
+.ourTeamListItem
+    margin-right: 20px
+    flex: 1 1 20%
+    &:last-child
+        margin-right: 0
+    
+    h2
+        text-align: center
+        margin-bottom: 0
+    p
+        text-align: center
+    &:hover h2:nth-child(2)
+        color: #14b696
+    
+
+.image_wrap
+    position: relative
+    img
+        filter: grayscale(1)
+        height: 100%
+
+.image
+    display: block
+    width: 100%
+    height: 100%
+
+.ourTeamOverlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: 100%
+    width: 100%
+    opacity: 0
+    transition: .3s ease
+    background-color: $cBlue
+
+.ourTeamListItem:hover .ourTeamOverlay
+    opacity: 0.8
+
+
+.teamIcon
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: center
+    padding: 10px
+    position: absolute
+    width: 100%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    a
+        i
+            flex: 1 1 30%
+            color: white
+            font-size: 35px
+            text-align: center
+            margin-right: 10px
+            
+        &:last-child
+            i
+                margin-right: 0
+    h2
+        text-align: center
+        color: #ffffff
+        font-size: 1.3em
+        margin-bottom: 10px
+    p
+        text-align: center
+        color: #ffffff
+        font-size: .8em
+        margin-bottom: 10px
+
+
+
+//SECTION FUN FACTS
+
+.funFacts
+    background: url('../img/funFacts.png') no-repeat
+    background-size: cover
+    .wrapper
+        h1
+            @include hPadding  
+        .or 
+            .bar
+                flex: auto
+                border: none
+                height: 1px
+                background-color: white
+                span
+                    color: white
+                    padding: 0 0.8em
+                    i
+                        font-size: 2em
+                        color: white
+
+// SECTION  COUNTER-------------------------------------------------------------------------------------------------
+
+.counter
+    background: black
+
+.middle
+     width: 100%
+
+.counting-sec
+    padding: 40px 0
+    width: 100%
+
+.inner-width
+    max-width: 1200px
+    margin: auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: center
+    flex: 1 1 0
+
+.col
+    flex: 1
+    text-align: center
+    padding: 20px
+    color: white
+    text-transform: uppercase
+
+.col i
+    font-size: 40px
+    color:white
+    border: 3px solid white
+    border-radius: 50%
+    padding: 20px
+
+.num
+    font-size: 3em
+    font-weight: bold
+    margin: 20px 0
+
+// SECTION  FORM-------------------------------------------------------------------------------------------------
+
+.form
+    .wrapper
+        h1
+            @include hPadding
+        h2
+            text-align: center
+            padding-top: $hPadding
+            padding-bottom: $hPadding 
+
+.formContainer
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center  
+    margin-bottom: 80px
+    .formLeft
+        align-self: flex-start
+        flex: 1 1 15%
+        
+        h2
+            text-align: left
+            color: $cBlack
+            width: 80%
+        p
+            text-align: left
+            color: #7f8c8d
+            width: 80%
+            
+    .formRight
+        align-self: flex-start
+        flex: 1 1 75%
+        h2
+            text-align: left
+        form
+            margin-top: 50px
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-between
+            align-items: center
+            h2
+                color: $cBlack
+            input
+                flex: 1 1 45%
+                padding: 20px 10px
+                border: none
+                border-bottom: 2px solid #e0e0e0
+                outline: none
+                margin-bottom: 10px
+                &:nth-child(2)
+                    margin-left: 10px
+            textarea
+                width: 100%
+                padding: 20px 10px
+                border: none
+                border-bottom: 2px solid #e0e0e0
+                outline: none
+            div
+                position: relative
+                margin-top: 10px
+                width: 100%
+                a
+                    position: absolute
+                    top: 0
+                    right: 0
+                    text-decoration: none
+                    color: $cBlack
+                    font-size: 1.5em
+                    line-height: normal
+                    i
+                        color: $cBlue
+                        line-height: 2
+                        font-size: 2em
+                        vertical-align: middle
+                        padding-right: 10px
+
+
+.contactRight
+    display: flex
+    flex-flow: column wrap
+    justify-content: flex-start
+    align-items: flex-end
+    flex: 1 1 5%
+    margin-left: 15px
+    
+    i
+        color: #7f8c8d
+        font-size: 2em
+        opacity: .6
+        &:hover
+            opacity: 1
+            color: $cBlack
+
+// SECTION  FORM-------------------------------------------------------------------------------------------------
+
+footer
+    padding: 0
+    background: #000
+    .wrapper
+        margin-top: -10px
+        padding: 20px 0
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+
+.firstPart
+    align-content: flex-start
+    align-self: flex-start
+    flex: 1 1 39%
+    color: #fff
+    border-top: 3px solid white
+    min-height: 18vh
+    padding: 0 20px
+    p
+        margin-top: 20px
+
+.secondPart
+    margin: 0 10px
+    align-content: flex-start
+    align-self: flex-start
+    flex: 1 1 39%
+    color: #fff
+    padding: 0 20px
+    border-top: 3px solid white
+    min-height: 18vh
+    border-left: none
+    border-right: none
+    form
+        p
+            position: relative
+            align-content: center
+            display: block
+            width: 100%
+            input
+                background: transparent
+                outline: none
+                padding: 5px
+                align-content: center
+                width: 100%
+                margin: 20px 0
+                border: 2px solid white
+                border-radius: 25px
+                color: #ffffff
+            i
+                color: white
+                position: absolute
+                top: 50%
+                right: 0%
+                transform: translate(-50%, -50%)
+
+.thirdPart
+    align-self: flex-start
+    align-content: flex-end
+    flex: 1 1 20%
+    color: #fff
+    border-top: 3px solid white
+    min-height: 18vh
+    padding: 0 50px
+    ul
+        li
+            &:first-child
+                list-style-type: none
+                font-size: 1.5em
+                font-weight: bold
+                margin-left: -20px
+
+@import "media" // Всегда в конце
